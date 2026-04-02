@@ -1,0 +1,13 @@
+{
+  "name": "rakshak-v2",
+  "version": "2.0.0",
+  "description": "True Offline-first Mesh Simulation",
+  "scripts": {
+    "start": "concurrently \"npm run server\" \"npm run client\"",
+    "server": "cd server && npm start",
+    "client": "cd client && npm run dev"
+  },
+  "dependencies": {
+    "concurrently": "^8.2.2"
+  }
+}

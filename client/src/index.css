@@ -1,0 +1,51 @@
+@import "tailwindcss";
+
+@theme {
+  --color-brand-green: #2b7042;
+  --color-brand-dark: #f0f4f2;
+  --color-bg-base: #ffffff;
+  --color-bg-card: #f8f9f8;
+  --color-text-main: #1a221d;
+  --color-text-dim: #5c6a61;
+  --color-status-active: #4CAF50;
+  --color-status-warning: #fbc02d;
+  --color-status-critical: #d32f2f;
+}
+
+body {
+  margin: 0;
+  font-family: 'Space Mono', -apple-system, sans-serif;
+  background-color: var(--color-bg-base);
+  color: var(--color-text-main);
+}
+
+/* Corner Bracket Styles for Cards */
+.corner-brackets {
+  position: relative;
+  border-radius: 6px;
+  background-color: var(--color-bg-card);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.02);
+}
+
+.corner-brackets::before,
+.corner-brackets::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  border: 1px solid rgba(55, 142, 86, 0.2);
+  border-radius: 6px;
+}
+
+.corner-brackets::before {
+  clip-path: polygon(0 0, 15px 0, 15px 2px, 2px 2px, 2px 15px, 0 15px, 0 calc(100% - 15px), 2px calc(100% - 15px), 2px calc(100% - 2px), 15px calc(100% - 2px), 15px 100%, 0 100%);
+  background-color: var(--color-brand-green);
+}
+
+.corner-brackets::after {
+  clip-path: polygon(100% 0, calc(100% - 15px) 0, calc(100% - 15px) 2px, calc(100% - 2px) 2px, calc(100% - 2px) 15px, 100% 15px, 100% calc(100% - 15px), calc(100% - 2px) calc(100% - 15px), calc(100% - 2px) calc(100% - 2px), calc(100% - 15px) calc(100% - 2px), calc(100% - 15px) 100%, 100% 100%);
+  background-color: var(--color-brand-green);
+}
