@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react'
 import io from 'socket.io-client'
 import Dashboard from './components/Dashboard'
 
-const SERVER_URL = 'http://localhost:5000'
+const SERVER_URL = import.meta.env.VITE_BACKEND_URL || window.location.origin
 
 function App() {
   const [simulationState, setSimulationState] = useState(null)
