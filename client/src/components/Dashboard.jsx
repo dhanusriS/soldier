@@ -37,15 +37,15 @@ export default function Dashboard({ state, socket }) {
   }, [nodes, criticalList]);
 
   return (
-    <div className="flex flex-col h-full w-full bg-bg-base p-4 overflow-hidden text-text-main">
+    <div className="flex flex-col min-h-screen lg:h-full w-full bg-bg-base p-2 lg:p-4 lg:overflow-hidden text-text-main">
       <TopPanel nodes={nodes} criticalCount={criticalList.length} />
 
-      <main className="flex-1 w-full flex gap-4 mt-4 min-h-0 overflow-hidden">
+      <main className="flex-1 w-full flex flex-col lg:flex-row gap-4 mt-4 min-h-0 lg:overflow-hidden">
         {/* Left Priority & Alerts */}
         <LeftPanel nodes={nodes} socket={socket} criticalList={criticalList} />
 
         {/* Center Canvas */}
-        <div className="flex-1 border border-brand-green/20 bg-white rounded corner-brackets p-4 relative flex flex-col shadow-sm">
+        <div className="w-full h-[50vh] lg:h-auto lg:flex-1 border border-brand-green/20 bg-white rounded corner-brackets p-2 lg:p-4 relative flex flex-col shadow-sm">
             <h3 className="text-xs font-bold text-brand-green tracking-widest mb-3 absolute top-6 left-6 z-10">BATTLEFIELD GRID</h3>
             <div className="absolute top-6 right-6 z-10 flex gap-4 text-[10px] font-bold tracking-widest font-mono">
                 <div className="flex items-center gap-1"><div className="w-2 h-2 bg-status-active"></div> SAFE</div>

@@ -32,7 +32,7 @@ function App() {
   }
 
   return (
-    <div className="h-screen w-screen overflow-hidden bg-bg-base text-gray-200 font-sans">
+    <div className="min-h-screen w-screen lg:h-screen lg:overflow-hidden bg-bg-base text-gray-200 font-sans">
       <Dashboard state={simulationState} socket={socket} />
     </div>
   )

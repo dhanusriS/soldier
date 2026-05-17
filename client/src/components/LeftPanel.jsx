@@ -4,7 +4,7 @@ import UnitCard from './UnitCard';
 
 export default function LeftPanel({ nodes, socket, criticalList }) {
   return (
-    <div className="w-80 flex flex-col gap-4 h-full">
+    <div className="w-full lg:w-80 flex flex-col gap-4 lg:h-full shrink-0">
       {/* Priority Actions & Critical List */}
       <div className="corner-brackets bg-bg-card border border-brand-green/20 p-4 flex flex-col flex-1 min-h-0">
         <h3 className="text-[10px] font-bold text-brand-green tracking-widest mb-3 flex items-center gap-2">

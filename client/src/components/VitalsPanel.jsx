@@ -24,8 +24,8 @@ export default function VitalsPanel({ nodes, socket }) {
     };
 
     return (
-        <div className="w-96 flex flex-col gap-4 h-full">
-            <div className="corner-brackets bg-bg-card border border-brand-green/20 p-4 flex flex-col flex-1 min-h-0">
+        <div className="w-full lg:w-96 flex flex-col gap-4 lg:h-full shrink-0">
+            <div className="corner-brackets bg-bg-card border border-brand-green/20 p-4 flex flex-col lg:flex-1 lg:min-h-0">
                 <h3 className="text-xs font-bold text-brand-green tracking-widest mb-3 uppercase">Unit Vitals List</h3>
                 <div className="flex-1 overflow-y-auto custom-scrollbar space-y-3 pr-2">
                    {Object.values(nodes).map(node => {
